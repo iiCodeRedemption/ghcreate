@@ -7,7 +7,7 @@ IF /I "%1"=="public" SET "visibility=--public"
 FOR %%A IN ("%CD%") DO SET "current_folder=%%~nA"
 
 IF NOT EXIST README.md (
-	echo "# %current_folder%" > README.md
+	echo # %current_folder% > README.md
 )
 
 git init
